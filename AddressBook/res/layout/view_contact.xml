@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/contactViewScroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TableLayout
+        android:id="@+id/contactViewTableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="1" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/nameLabelTextView"
+                style="@style/ContactLabelTextView"
+                android:text="@+id/label_name" />
+            <EditText
+                android:id="@+id/nameTextView"
+                style="@style/ContactTextView">
+            </EditText>
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/phoneLabelTextView"
+                style="@style/ContactLabelTextView"
+                android:text="@+id/label_name" />
+            <EditText
+                android:id="@+id/phoneTextView"
+                style="@style/ContactTextView">
+            </EditText>
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+            
+            <TextView
+                android:id="@+id/emailLabelTextView"
+                style="@style/ContactLabelTextView"
+                android:text="@+id/label_name" />
+            <EditText
+                android:id="@+id/emailTextView"
+                style="@style/ContactTextView">
+            </EditText>
+            
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        
+        	<TextView
+                android:id="@+id/streetLabelTextView"
+                style="@style/ContactLabelTextView"
+                android:text="@+id/label_name" />
+            <EditText
+                android:id="@+id/streetTextView"
+                style="@style/ContactTextView">
+            </EditText>
+
+        </TableRow>
+
+		<TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+        
+        	<TextView
+                android:id="@+id/cityLabelTextView"
+                style="@style/ContactLabelTextView"
+                android:text="@+id/label_name" />
+            <EditText
+                android:id="@+id/cityTextView"
+                style="@style/ContactTextView">
+            </EditText>
+
+        </TableRow>
+        
+    </TableLayout>
+    
+</ScrollView>
