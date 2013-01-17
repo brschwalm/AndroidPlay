@@ -11,6 +11,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseConnector {
 
 	private static final String DB_NAME = "user_contacts";
+	private static final String TABLE_NAME = "contacts";
+	private static final String ID_PREFIX = "_id";
 	private SQLiteDatabase db;
 	private DatabaseOpenHelper dbOpenHelper;
 	
@@ -29,11 +31,11 @@ public class DatabaseConnector {
 	
 	private ContentValues setContent(String name, String email, String phone, String state, String city){
 		ContentValues c = new ContentValues();
-		c.put("name", name);
-		c.put("email", email);
-		c.put("phone", phone);
-		c.put("state", state);
-		c.put("city", city);
+		c.put(Constants.NAME_ID, name);
+		c.put(Constants.EMAIL_ID, email);
+		c.put(Constants.PHONE_ID, phone);
+		c.put(Constants.STREET_ID, state);
+		c.put(Constants.CITY_ID, city);
 		return c;
 	}
 	
@@ -41,33 +43,33 @@ public class DatabaseConnector {
 		ContentValues c = setContent(name, email, phone, state, city);
 		
 		open();
-		db.insert("contacts", null, c);
+		db.insert(TABLE_NAME, null, c);
 		close();
 	}
 	
 	public void updateContact(long id, String name, String email, String phone, String state, String city){
 		ContentValues c = setContent(name, email, phone, state, city);
 		open();
-		db.update("contacts", c,  getIdString(id), null);
+		db.update(TABLE_NAME, c,  getIdString(id), null);
 		close();
 	}
 	
 	public Cursor getAllContacts(){
-		return db.query("contacts", new String[] {"_id", "name"}, null, null, null, null, "name");
+		return db.query(TABLE_NAME, new String[] {ID_PREFIX, Constants.NAME_ID}, null, null, null, null, Constants.NAME_ID);
 	}
 	
 	public Cursor getOneContact(long id){
-		return db.query("contacts", null, getIdString(id), null, null, null, null);
+		return db.query(TABLE_NAME, null, getIdString(id), null, null, null, null);
 	}
 	
 	public void deleteContact(long id){
 		open();
-		db.delete("contacts", getIdString(id), null);
+		db.delete(TABLE_NAME, getIdString(id), null);
 		close();
 	}
 	
 	private String getIdString(long id){
-		return "_id=" + id;
+		return ID_PREFIX + "=" + id;
 	}
 	
 	private class DatabaseOpenHelper extends SQLiteOpenHelper{

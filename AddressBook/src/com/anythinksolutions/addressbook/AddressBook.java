@@ -3,6 +3,7 @@ package com.anythinksolutions.addressbook;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.Menu;
@@ -16,7 +17,6 @@ import android.widget.SimpleCursorAdapter;
 
 public class AddressBook extends ListActivity {
 
-	public static final String ROW_ID = "row_id";
 	
 	private ListView contactListView;
 	private CursorAdapter contactAdapter;
@@ -26,11 +26,12 @@ public class AddressBook extends ListActivity {
         super.onCreate(savedInstanceState);
         contactListView = getListView();
         contactListView.setOnItemClickListener(viewContactListener);
+        //contactListView.setBackgroundColor(Color.BLACK);
         
         //map each contact's name to a textview in the ListView layout
-        String[] from = new String[] { "name" };
+        String[] from = new String[] { Constants.NAME_ID };
         int[] to = new int[] { R.id.contactTextView };
-        CursorAdapter contactAdapter = new SimpleCursorAdapter(AddressBook.this, R.layout.contact_list_item, null, from, to);
+        contactAdapter = new SimpleCursorAdapter(AddressBook.this, R.layout.contact_list_item, null, from, to);
         setListAdapter(contactAdapter);
     }
     
@@ -92,7 +93,7 @@ public class AddressBook extends ListActivity {
     	@Override
     	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
     		Intent viewIntent = new Intent(AddressBook.this, ViewContact.class);
-    		viewIntent.putExtra(ROW_ID, arg3);
+    		viewIntent.putExtra(Constants.ROW_ID, arg3);
     		startActivity(viewIntent);
     	}
 	};

@@ -10,8 +10,7 @@
 
         <EditText
             android:id="@+id/nameEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ContactEditTextView"
             android:inputType="textPersonName"
             android:hint="@string/name_hint"
             android:imeOptions="actionNext">
@@ -19,16 +18,14 @@
         </EditText>
         <EditText
             android:id="@+id/phoneEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ContactEditTextView"
             android:inputType="phone"
             android:hint="@string/phone_hint"
             android:imeOptions="actionNext">
         </EditText>
         <EditText
             android:id="@+id/emailEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ContactEditTextView"
             android:inputType="textEmailAddress"
             android:hint="@string/email_hint"
             android:imeOptions="actionNext">
@@ -36,8 +33,7 @@
 
         <TextView
             android:id="@+id/textView1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ContactEditTextView"
             android:text="@string/address_label"
             android:layout_marginTop="5dp"
             android:layout_marginBottom="2.5dp"
@@ -45,16 +41,14 @@
         
         <EditText
             android:id="@+id/streetEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ContactEditTextView"
             android:inputType="text"
             android:hint="@string/street_hint"
             android:imeOptions="actionNext">
         </EditText>
         <EditText
             android:id="@+id/cityEditText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/ContactEditTextView"
             android:inputType="text"
             android:hint="@string/city_hint"            
             android:imeOptions="actionDone">

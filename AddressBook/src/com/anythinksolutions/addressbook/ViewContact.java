@@ -34,7 +34,7 @@ public class ViewContact extends Activity {
 		cityTextView = (TextView) findViewById(R.id.cityTextView);
 
 		Bundle extras = getIntent().getExtras();
-		rowId = extras.getLong(AddressBook.ROW_ID);
+		rowId = extras.getLong(Constants.ROW_ID);
 	}
 
 	@Override
@@ -57,12 +57,12 @@ public class ViewContact extends Activity {
 		case R.id.editItem:
 			Intent editIntent = new Intent(this, AddEditContact.class);
 			
-			editIntent.putExtra("row_id", rowId);
-			editIntent.putExtra("name", nameTextView.getText());
-			editIntent.putExtra("phone", phoneTextView.getText());
-			editIntent.putExtra("email", emailTextView.getText());
-			editIntent.putExtra("street", streetTextView.getText());
-			editIntent.putExtra("city", cityTextView.getText());
+			editIntent.putExtra(Constants.ROW_ID, rowId);
+			editIntent.putExtra(Constants.NAME_ID, nameTextView.getText().toString());
+			editIntent.putExtra(Constants.PHONE_ID, phoneTextView.getText().toString());
+			editIntent.putExtra(Constants.EMAIL_ID, emailTextView.getText().toString());
+			editIntent.putExtra(Constants.STREET_ID, streetTextView.getText().toString());
+			editIntent.putExtra(Constants.CITY_ID, cityTextView.getText().toString());
 		
 			startActivity(editIntent);
 			return true;
@@ -124,11 +124,11 @@ public class ViewContact extends Activity {
 			super.onPostExecute(result);
 			result.moveToFirst();
 
-			int nameIndex = result.getColumnIndex("name");
-			int phoneIndex = result.getColumnIndex("phone");
-			int emailIndex = result.getColumnIndex("email");
-			int streetIndex = result.getColumnIndex("street");
-			int cityIndex = result.getColumnIndex("city");
+			int nameIndex = result.getColumnIndex(Constants.NAME_ID);
+			int phoneIndex = result.getColumnIndex(Constants.PHONE_ID);
+			int emailIndex = result.getColumnIndex(Constants.EMAIL_ID);
+			int streetIndex = result.getColumnIndex(Constants.STREET_ID);
+			int cityIndex = result.getColumnIndex(Constants.CITY_ID);
 
 			nameTextView.setText(result.getString(nameIndex));
 			phoneTextView.setText(result.getString(phoneIndex));
