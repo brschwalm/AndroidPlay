@@ -25,5 +25,18 @@
     <string name="default_zip">02115</string>
     
     <string name="zipcode">ZIP code:&#160;</string>
+    
+    <string name="duplicate_zip_error">Duplicate Zip Code.</string>
+    <string name="invalid_zip_error">Invalid Zip Code</string>
         
+    <string name="location_url_pre_zipcode">http://i.wxbug.net/REST/Direct/GetLocation.ashx?zip=</string>
+    <string name="weatherbug_api_key"></string>
+    <string name="location">location</string>
+    <string name="city">city</string>
+    <string name="state">state</string>
+    <string name="country">country</string>
+    
+    <string name="current_conditions">Current Conditions</string>
+    <string name="five_day_forecast">Five Day Forecast</string>
+  
 </resources>
