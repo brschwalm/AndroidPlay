@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/containerLinearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingBottom="10dp"
+    android:background="@drawable/widget_bg_normal" >
+    
+    <ImageView android:id="@+id/weatherImageView" 
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:contentDescription="@string/weather_image_description"/>
+    
+    <TextView android:id="@+id/location"
+        style="@style/displayTextView"
+        android:layout_marginBottom="5dp"
+        android:textSize="14sp"/>
+    
+    <!-- Temperature -->
+    <LinearLayout style="@style/widgetLinearLayout">
+        
+        <TextView style="@style/displayLabelTextView"
+            android:text="@string/temperature_label_string"/>
+        
+        <TextView android:id="@+id/temperatureTextView"
+            style="@style/displayValueTextView"/>
+
+    </LinearLayout>
+    
+    <!-- Feels Like -->
+    <LinearLayout style="@style/widgetLinearLayout">
+        
+        <TextView style="@style/displayLabelTextView"
+            android:text="@string/feels_like_label_string"/>
+        
+        <TextView android:id="@+id/feelsLikeTextView"
+            style="@style/displayValueTextView"/>
+
+    </LinearLayout>
+    
+    <!-- Humidity -->
+    <LinearLayout style="@style/widgetLinearLayout">
+        
+        <TextView style="@style/displayLabelTextView"
+            android:text="@string/humidity_label_string"/>
+        
+        <TextView android:id="@+id/humidityTextView"
+            style="@style/displayValueTextView"/>
+
+    </LinearLayout>
+    
+    <!-- Chance of Precipitation -->
+    <LinearLayout style="@style/widgetLinearLayout">
+        
+        <TextView style="@style/displayLabelTextView"
+            android:text="@string/percip_chance_label_string"/>
+        
+        <TextView android:id="@+id/precipChanceTextView"
+            style="@style/displayValueTextView"/>
+
+    </LinearLayout>
+    
+	<TextView 
+	    style="@style/displayTextView"
+        android:textSize="10sp"
+	    android:layout_marginBottom="10dp"
+	    android:text="@string/click_widget_message"/>       
+
+</LinearLayout>

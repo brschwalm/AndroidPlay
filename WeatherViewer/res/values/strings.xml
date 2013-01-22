@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weather Viewer</string>
+    <string name="add_new_city">Add City</string>
+    <string name="temperature_label_string">Temperature:&#160;</string>
+    <string name="feels_like_label_string">Feels like:&#160;</string>
+    <string name="humidity_label_string">Humidity:&#160;</string>
+    <string name="percip_chance_label_string">Chance of Precipitation:&#160;</string>
+    <string name="weather_image_description">Weather Picture</string>
+    <string name="click_widget_message">Click to launch WeatherView app</string>
+
+    <string name="add_city_dialog_title">Add City</string>
+    <string name="zipcode_prompt">Please Enter a Zip Code:</string>
+    <string name="add_city_checkbox_text">Set as preferred City</string>
+    <string name="add_city_button_text">Add City</string>
+    <string name="add_city_dialog_bundle_key">dialog_bundle_key</string>
+    
+    <string name="city_dialog_preferred">Set Preferred</string>
+    <string name="city_dialog_delete">Delete</string>
+    <string name="city_dialog_cancel">Cancel</string>
+    <string name="city_dialog_message_prefix">Perform which action on&#160;</string>
+    <string name="city_dialog_message_postfix">\?</string>
+    <string name="last_city_warning">Cannot delete the last city.</string>
+    <string name="default_zip">02115</string>
+    
+    <string name="zipcode">ZIP code:&#160;</string>
+        
+</resources>
