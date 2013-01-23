@@ -113,9 +113,7 @@ public class CitiesFragment extends ListFragment {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							if(citiesArrayAdapter.getCount() == 1){
-								Toast lastCityToast = Toast.makeText(context,  resources.getString(R.string.last_city_warning), Toast.LENGTH_LONG);
-								lastCityToast.setGravity(Gravity.CENTER, 0, 0);
-								lastCityToast.show();
+								Utils.showToast(context, R.string.last_city_warning);
 								return;
 							}
 							
@@ -155,4 +153,15 @@ public class CitiesFragment extends ListFragment {
 		super.onSaveInstanceState(outState);
 		outState.putInt(CURRENT_CITY_KEY,  currentCityIndex);
 	};
+
+	public void addCity(String city, boolean isSelected){
+		
+		citiesArrayAdapter.add(city);
+		citiesArrayAdapter.notifyDataSetChanged();
+		
+		if(isSelected){
+			currentCityIndex = citiesArrayList.indexOf(city);
+			citiesListChangeListener.onSelectedCityChanged(city);
+		}
+	}
 }

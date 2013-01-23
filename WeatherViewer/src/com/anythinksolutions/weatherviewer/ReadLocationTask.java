@@ -44,7 +44,7 @@ public class ReadLocationTask extends AsyncTask<Object, Object, String> {
 	@Override
 	protected String doInBackground(Object... params) {
 		try{
-			URL url = new URL(resources.getString(R.string.location_url_pre_zipcode) + zip + "&api_key=" + R.string.weatherbug_api_key);
+			URL url = new URL(resources.getString(R.string.weather_url_prefix) + zip + "&format=json&num_of_days=5&key=" + resources.getString(R.string.weatherbug_api_key));
 			Reader reader = new InputStreamReader(url.openStream());
 			JsonReader jReader = new JsonReader(reader);
 			jReader.beginObject();

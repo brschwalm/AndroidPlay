@@ -30,13 +30,30 @@
     <string name="invalid_zip_error">Invalid Zip Code</string>
         
     <string name="location_url_pre_zipcode">http://i.wxbug.net/REST/Direct/GetLocation.ashx?zip=</string>
-    <string name="weatherbug_api_key"></string>
+    <string name="weather_url_prefix">http://free.worldweatheronline.com/feed/weather.ashx?q=</string>
+    <string name="weatherbug_api_key">eeef0ec78d141921132301</string>
+    
+    <string name="js_current">current_condition</string>
+    <string name="js_temp">temp_F</string>
+    <string name="js_feels">temp_C</string>
+    <string name="js_humid">humidity</string>
+    <string name="js_precip">precipMM</string>
+    <string name="js_image">weatherIconUrl</string>
+    <string name="js_desc">weatherDesc</string>
+    <string name="js_value">value</string>
+    
     <string name="location">location</string>
     <string name="city">city</string>
     <string name="state">state</string>
     <string name="country">country</string>
-    
+    <string name="loading_message">Loading Forecast&#8230;</string>
     <string name="current_conditions">Current Conditions</string>
     <string name="five_day_forecast">Five Day Forecast</string>
   
+    <string name="null_data_toast">No weather information was found for this location</string>
+    <string name="temp_unit">F</string>
+    
+   <string name="high_temperature_label_string">High:&#160;</string>
+   <string name="low_temperature_label_string">Low:&#160;</string>
+
 </resources>

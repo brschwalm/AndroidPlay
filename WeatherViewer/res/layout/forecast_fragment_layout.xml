@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout android:id="@+id/forecast_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/forecast_image"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"/>
+
+        <TextView
+            android:id="@+id/location"
+            style="@style/forecastTextView"
+            android:textSize="27sp"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/temp_label"
+            style="@style/forecastTextView"
+            android:text="@string/temperature_label_string"/>
+
+        <TextView
+            android:id="@+id/temp"
+            style="@style/forecastTextView"/>
+
+        <TextView
+            android:id="@+id/feels_label"
+			style="@style/forecastTextView"
+			android:text="@string/feels_like_label_string"/>
+
+        <TextView
+            android:id="@+id/feels"
+			style="@style/forecastTextView" />
+
+        <TextView
+            android:id="@+id/humid_label"
+            style="@style/forecastTextView"
+            android:text="@string/humidity_label_string" />
+
+        <TextView
+            android:id="@+id/humid"
+            style="@style/forecastTextView" />
+
+        <TextView
+            android:id="@+id/precip_label"
+            style="@style/forecastTextView"
+            android:text="@string/percip_chance_label_string" />
+
+        <TextView
+            android:id="@+id/precip"
+            style="@style/forecastTextView"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loading_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="20sp" android:text="@string/loading_message"
+		android:visibility="gone" />
+
+</FrameLayout>
