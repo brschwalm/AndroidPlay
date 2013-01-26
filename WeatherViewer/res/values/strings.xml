@@ -28,7 +28,8 @@
     
     <string name="duplicate_zip_error">Duplicate Zip Code.</string>
     <string name="invalid_zip_error">Invalid Zip Code</string>
-        
+    
+    <!--  URL: http://free.worldweatheronline.com/feed/weather.ashx?q=80027&format=json&num_of_days=5&key=eeef0ec78d141921132301  -->
     <string name="location_url_pre_zipcode">http://i.wxbug.net/REST/Direct/GetLocation.ashx?zip=</string>
     <string name="weather_url_prefix">http://free.worldweatheronline.com/feed/weather.ashx?q=</string>
     <string name="weatherbug_api_key">eeef0ec78d141921132301</string>
@@ -41,6 +42,9 @@
     <string name="js_image">weatherIconUrl</string>
     <string name="js_desc">weatherDesc</string>
     <string name="js_value">value</string>
+    <string name="js_date">date</string>
+    <string name="js_high_temp">tempMaxF</string>
+    <string name="js_low_temp">tempMinF</string>
     
     <string name="location">location</string>
     <string name="city">city</string>
@@ -55,5 +59,169 @@
     
    <string name="high_temperature_label_string">High:&#160;</string>
    <string name="low_temperature_label_string">Low:&#160;</string>
+   
+   <string name="zip_extra">zip_extra</string>
 
 </resources>
+
+<!--
+{
+   "data":{
+      "current_condition":[
+         {
+            "cloudcover":"0",
+            "humidity":"34",
+            "observation_time":"12:06 AM",
+            "precipMM":"0.0",
+            "pressure":"1018",
+            "temp_C":"10",
+            "temp_F":"50",
+            "visibility":"16",
+            "weatherCode":"113",
+            "weatherDesc":[
+               {
+                  "value":"Sunny"
+               }
+            ],
+            "weatherIconUrl":[
+               {
+                  "value":"http:\/\/www.worldweatheronline.com\/images\/wsymbols01_png_64\/wsymbol_0001_sunny.png"
+               }
+            ],
+            "winddir16Point":"N",
+            "winddirDegree":"0",
+            "windspeedKmph":"0",
+            "windspeedMiles":"0"
+         }
+      ],
+      "request":[
+         {
+            "query":"80027",
+            "type":"Zipcode"
+         }
+      ],
+      "weather":[
+         {
+            "date":"2013-01-25",
+            "precipMM":"0.0",
+            "tempMaxC":"13",
+            "tempMaxF":"55",
+            "tempMinC":"0",
+            "tempMinF":"32",
+            "weatherCode":"113",
+            "weatherDesc":[
+               {
+                  "value":"Sunny"
+               }
+            ],
+            "weatherIconUrl":[
+               {
+                  "value":"http:\/\/www.worldweatheronline.com\/images\/wsymbols01_png_64\/wsymbol_0001_sunny.png"
+               }
+            ],
+            "winddir16Point":"SSE",
+            "winddirDegree":"153",
+            "winddirection":"SSE",
+            "windspeedKmph":"12",
+            "windspeedMiles":"7"
+         },
+         {
+            "date":"2013-01-26",
+            "precipMM":"0.0",
+            "tempMaxC":"12",
+            "tempMaxF":"53",
+            "tempMinC":"4",
+            "tempMinF":"38",
+            "weatherCode":"113",
+            "weatherDesc":[
+               {
+                  "value":"Sunny"
+               }
+            ],
+            "weatherIconUrl":[
+               {
+                  "value":"http:\/\/www.worldweatheronline.com\/images\/wsymbols01_png_64\/wsymbol_0001_sunny.png"
+               }
+            ],
+            "winddir16Point":"SSE",
+            "winddirDegree":"159",
+            "winddirection":"SSE",
+            "windspeedKmph":"12",
+            "windspeedMiles":"7"
+         },
+         {
+            "date":"2013-01-27",
+            "precipMM":"0.1",
+            "tempMaxC":"12",
+            "tempMaxF":"54",
+            "tempMinC":"0",
+            "tempMinF":"33",
+            "weatherCode":"113",
+            "weatherDesc":[
+               {
+                  "value":"Sunny"
+               }
+            ],
+            "weatherIconUrl":[
+               {
+                  "value":"http:\/\/www.worldweatheronline.com\/images\/wsymbols01_png_64\/wsymbol_0001_sunny.png"
+               }
+            ],
+            "winddir16Point":"WSW",
+            "winddirDegree":"255",
+            "winddirection":"WSW",
+            "windspeedKmph":"10",
+            "windspeedMiles":"6"
+         },
+         {
+            "date":"2013-01-28",
+            "precipMM":"2.9",
+            "tempMaxC":"5",
+            "tempMaxF":"42",
+            "tempMinC":"1",
+            "tempMinF":"33",
+            "weatherCode":"116",
+            "weatherDesc":[
+               {
+                  "value":"Partly Cloudy"
+               }
+            ],
+            "weatherIconUrl":[
+               {
+                  "value":"http:\/\/www.worldweatheronline.com\/images\/wsymbols01_png_64\/wsymbol_0002_sunny_intervals.png"
+               }
+            ],
+            "winddir16Point":"E",
+            "winddirDegree":"100",
+            "winddirection":"E",
+            "windspeedKmph":"14",
+            "windspeedMiles":"9"
+         },
+         {
+            "date":"2013-01-29",
+            "precipMM":"12.3",
+            "tempMaxC":"1",
+            "tempMaxF":"33",
+            "tempMinC":"-13",
+            "tempMinF":"8",
+            "weatherCode":"335",
+            "weatherDesc":[
+               {
+                  "value":"Patchy heavy snow"
+               }
+            ],
+            "weatherIconUrl":[
+               {
+                  "value":"http:\/\/www.worldweatheronline.com\/images\/wsymbols01_png_64\/wsymbol_0012_heavy_snow_showers.png"
+               }
+            ],
+            "winddir16Point":"NE",
+            "winddirDegree":"46",
+            "winddirection":"NE",
+            "windspeedKmph":"19",
+            "windspeedMiles":"12"
+         }
+      ]
+   }
+}  
+ -->
